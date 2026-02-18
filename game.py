@@ -5,7 +5,7 @@ def load_score():
     if os.path.exists(SCORE_FILE):
         with open (SCORE_FILE, "r") as file:
             return json.load(file)
-        return {"x": 0, "o": 0, "draw": 0}
+    return {"x": 0, "o": 0, "draw": 0}
 def save_score(score): 
         with open(SCORE_FILE, "w") as file:
             json.dump(score, file)
@@ -78,6 +78,7 @@ def make_move(row, col, mode="pvp"):
              }
          if pruefe_unentschieden():
              score["draw"] +=1
+             save_score(score)
              return{
                  "status": "draw",
                  "symbol": computer_symbol,

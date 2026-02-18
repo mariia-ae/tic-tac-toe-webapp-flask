@@ -66,7 +66,7 @@ function move(row, col) {
         if (data.status === "continue") {
             if (mode === "pvp") {
             spielerAnzeige.innerText =
-            "Aktueler Spieler: " + data.player.toUpperCase();
+            "Aktueller Spieler: " + data.player.toUpperCase();
         }
         } else {
             if (data.computer) {
@@ -105,7 +105,7 @@ function resetGame() {
         btn.classList.remove("win");
        });
        gameOver = false;
-       spielerAnzeige.innerText = "Aktueller Spiler: X";
+       spielerAnzeige.innerText = "Aktueller Spieler: X";
        spielerAnzeige.classList.remove("win-text");
     })
 }
