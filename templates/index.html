@@ -7,19 +7,21 @@
     <head>
     </head>
     <body>
-        <h1>Tic Tac Toe</h1>
-        <h2 id="spieler">Aktueller Spieler: X</h2>
-        <h3 id="score">
+        <div class="container">
+            <h1>Tic Tac Toe</h1>
+            <h2 id="spieler">Aktueller Spieler: X</h2>
+            <h3 id="score">
             Player (x): 0 |
             Computer (0) : 0 |
             Draw: 0
-        </h3>
-        <div id="mode">
-            <button onclick="setMode('pvp')">Player vs Player</button>
-            <button onclick="setMode('ai')">Player vs Computer</button>
+            </h3>
+            <div id="mode">
+                <button onclick="setMode('pvp')">Player vs Player</button>
+                <button onclick="setMode('ai')">Player vs Computer</button>
+            </div>
+            <div id="board"></div>
+            <button id="reset" onclick="resetGame()">Reset</button>
         </div>
-        <div id="board"></div>
-        <button id="reset" onclick="resetGame()">Reset</button>
         <script src="/static/script.js"></script>
     </body>
 </html>
